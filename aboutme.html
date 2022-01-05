@@ -1,1 +1,136 @@
 
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    	<title>About me</title>
+    <meta charset="utf-8">
+
+<!-- Myanmar unicode font -->
+    	<link rel="stylesheet" href='https://mmwebfonts.comquas.com/fonts/?font=myanmar3' />
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <style> -->
+	<style type="text/css">
+  .unicode{
+    font-family:Myanmar3,Yunghkio,'Masterpiece Uni Sans';
+  }
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 5;
+  padding: 5;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.previous {
+background-color: #4CAF50;
+color: black;
+}
+
+</style>
+</head>
+
+  <body oncontextmenu="return false">
+  
+  <script type="text/javascript">
+  function mousehandler(e) {
+  var myevent = (isNS) ? e : event;
+  var eventbutton = (isNS) ? myevent.which : myevent.button;
+  if ((eventbutton == 2) || (eventbutton == 3)) return false;
+  }
+  document.oncontextmenu = mischandler;
+  document.onmousedown = mousehandler;
+  document.onmouseup = mousehandler;
+  function disableCtrlKeyCombination(e) {
+  var forbiddenKeys = new Array("a", "s", "c", "x","u");
+  var key;
+  var isCtrl;
+  if (window.event) {
+  key = window.event.keyCode;
+  //IE
+  if (window.event.ctrlKey)
+  isCtrl = true;
+  else
+  isCtrl = false;
+  }
+  else {
+  key = e.which;
+  //firefox
+  if (e.ctrlKey)
+  isCtrl = true;
+  else
+  isCtrl = false;
+  }
+  if (isCtrl) {
+  for (i = 0; i < forbiddenKeys.length; i++) {
+  //case-insensitive comparation
+  if (forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase()) {
+  return false;
+  }
+  }
+  }
+  return true;
+  }
+  </script>
+  
+  <script>
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function MyFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+  var dropdowns = document.getElementsByClassName("dropdown-content");
+  var i;
+  for (i = 0; i < dropdowns.length; i++) {
+  var openDropdown = dropdowns[i];
+  if (openDropdown.classList.contains('show')) {
+  openDropdown.classList.remove('show');
+  }
+  }
+  }
+  }
+  </script>
+  
+ <p>
+  ကျနော်က <b>Bun Gon</b> ဖြစ်ပြီး coding ရေးတာနဲ့ အိုင်တီနည်းပညာအပါအဝင် ဘာသာရပ်အချို့ကို စိတ်ဝင်စားပါတယ်။
+  <img src ="mypic01.jpg" height="400" width="345"
+  alt ="mypic01">
+  <br>
+  တက္ကသိုလ်ဝင်တန်း အောင်မြင်ခဲ့တုန်းက ကွန်ပျူတာတက္ကသိုလ် ဝင်ခွင့်အတွက် ရမှတ် ၁၀ မှတ်နီးပါး လိုနေခဲ့လို့ တက်ခွင့်မကြုံခဲ့သလို
+  ကျေးလက်တောရွာမှာ နေထိုင်တာကြောင့် ကွန်ပျူတာသင်တန်း ဘာတစ်ခုမှ မတက်ခဲ့ဖူးပါဘူး။ ဒါပေမယ့် လက်လှမ်းမီသလောက်
+  ကွန်ပျူတာဆိုင်ရာ စာအုပ်စာတမ်းအပြင် တခြားစာပေတွေကို လေ့လာဖတ်ရှုခွင့် ပုံမှန်ရခဲ့တာကြောင့် အိုင်တီဆိုင်ရာ အသိသညာအချို့ကို
+  ရင်းနီးနေခဲ့သလို ရှိနေတာပါ။ ၂၀၁၁ မှာ ကွန်ပျူတာစသုံးဖူး၊ ၂၀၁၈ မှာတော့ mobile internet ကို စတင်ထိတွေ့ခွင့်ရချိန်ကစပြီး
+  အိုင်တီပညာရပ်ကို ပိုမိုထိတွေ့လေ့လာခွင့် ရလာပါတယ်။
+  
+  <img src ="mypic02.jpg" height="250" width="345"
+  alt ="my pic 2">
+  
+  ပထမ အစောပိုင်းတုန်းက သူလိုငါလိုပဲ Facebook လူမှုကွန်ယက်ပေါ်မှာ စာတိုပေစ ရေးလာခဲ့ပေမယ့် ကြာလာတော့ စိတ်တိုင်းကျ အားရမှုမရှိသေးတာကြောင့် 
+  Facebook page ဖွင့်ပြီးရေးလာတဲ့အခါမှာ စာပေကုန်ကြမ်း ပိုမိုလိုအပ်လာတဲ့အတွက် Wikipedia တို့ Quora digest တို့လို နာမည်ရ ဝက်ဘ်ဆိုက်အပါအဝင်
+  blogger သမားတွေရဲ့ ဝက်ဘ်ဆိုက်စာမျက်နှာအချို့ကို တခုတ်တရ လေ့လာမှတ်သားဖြစ်လာတယ်။
+  မြန်မာပြည်က လူငယ်တွေရေးတဲ့ ဘလော့ဂ်တွေကို လိုက်ဖတ်ပြီး စိတ်ဝင်စားတဲ့နေရာတွေမှာ comment ဝင်ပေးရင်းက mminsight မှာ စာတစ်ပုဒ်စ နှစ်ပုဒ်စ ဝင်ရေးခွင့်ကြုံပြီး
+  WordPress အကြောင်း နည်းနည်းသိစ ပြုလာပါတယ်။
+   <a href="https://www.facebook.com/insight4myanmar"> insight for Myanmar Facebook စာမျက်နှာ</a>မှာ ရံဖန်ရံခါ ဝင်ရေးကူပေးရင်း python လို programming language
+  ကို  <a href="https://www.sololearn.com/home"> Sololearn </a> မှာ ဝင်လေ့လာဖြစ်သွားတာကစပြီး HTML, CSS, JavaScript အပါအဝင် programming language တချို့ကို ဆက်တိုက်လေ့လာဖြစ်ခဲ့ပါတယ်။
+  ဒီမတိုင်ခင်မှာတော့ <a href=" https://www.mooc.org/"> MOOC </a>
+  မှာ online certificate ပေးတဲ့ နိုင်ငံတကာတက္ကသိုလ်တွေရဲ့ course တချို့ကို သင်ယူဖြစ်ပါသေးတယ်၊ အဲဒါတွေက ငွေသွင်းမှ certificate
+  ထုတ်ပေးတာကြောင့် အတွေ့အကြုံအနေနဲ့ပဲ ရှိခဲ့တာပါ။ Sololearn မှာက course တစ်ခုပြီးတိုင်း certificate တစ်ခုကို email နဲ့ပို့လာပေးပါတယ်၊ အခပေးစနစ်နဲ့သင်ရင်တော့ ပိုစုံမလားမသိပါ။
+  <img src ="mypic03.jpg" height="250" width="345"
+  alt ="certificate"><br>
+  
+  တကယ်တမ်း ဝက်ဘ်ဆိုက်ရေးကြည့်တဲ့အခါမှာ <a Greg="https://www.w3schools.com/">w3school</a> ကိုပိုပြီး အလေးထားလေ့လာရတာပါ၊ သူက အခကြေးငွေနဲ့ certificate ရောင််းချပေးတာ၊
+  ငွေပေးပြီး လေ့လာနိုင်ရင် ပိုကောင်းတဲ့ ပညာရနိုင်တာရှိပါတယ်။ တခြား အားထားရတဲ့ ဝက်ဘ်ဆိုက်အများကြီး ရှိနေပါသေးတယ်။
+  
+  </p>
+  <a href="index.html"
+  class="previous">&laquo;
+  Home</a>
+  </body>
+  </html>
