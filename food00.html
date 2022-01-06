@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<title>Restaurant</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+/* Footer */
+
+.footer {
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  height: 90px;
+  background-color: #D0DAEE;
+}
+
+.footer-text-left {
+  font-size:25px;
+  padding-left:40px;
+  float:left;
+  word-spacing:20px;
+}
+
+.icon-style {
+  height:40px;
+  margin-left:20px;
+  margin-top:5px;
+}
+
+.icon-style:hover {
+  background-color:yellow;
+  padding:5px;
+}
+</style>
+
+<body oncontextmenu="return false">
+  
+  <script type="text/javascript">
+  function mousehandler(e) {
+  var myevent = (isNS) ? e : event;
+  var eventbutton = (isNS) ? myevent.which : myevent.button;
+  if ((eventbutton == 2) || (eventbutton == 3)) return false;
+  }
+  document.oncontextmenu = mischandler;
+  document.onmousedown = mousehandler;
+  document.onmouseup = mousehandler;
+  function disableCtrlKeyCombination(e) {
+  var forbiddenKeys = new Array("a", "s", "c", "x","u");
+  var key;
+  var isCtrl;
+  if (window.event) {
+  key = window.event.keyCode;
+  //IE
+  if (window.event.ctrlKey)
+  isCtrl = true;
+  else
+  isCtrl = false;
+  }
+  else {
+  key = e.which;
+  //firefox
+  if (e.ctrlKey)
+  isCtrl = true;
+  else
+  isCtrl = false;
+  }
+  if (isCtrl) {
+  for (i = 0; i < forbiddenKeys.length; i++) {
+  //case-insensitive comparation
+  if (forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase()) {
+  return false;
+  }
+  }
+  }
+  return true;
+  }
+  </script>
+  
+  <script>
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function MyFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+  var dropdowns = document.getElementsByClassName("dropdown-content");
+  var i;
+  for (i = 0; i < dropdowns.length; i++) {
+  var openDropdown = dropdowns[i];
+  if (openDropdown.classList.contains('show')) {
+  openDropdown.classList.remove('show');
+  }
+  }
+  }
+  }
+  </script>
+  
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu &times;</a>
+  <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Curry</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-right w3-padding-16">အချစ်ရွာ စားတော်ဆက်</div>
+   <!-- <div class="w3-center w3-padding-16">My Food</div>-->
+  </div>
+</div>
+  
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+<h2>အချစ်ရွာ စားတော်ဆက်မှ ကြိုဆိုပါတယ်</h2>
+<p>မင်္ဂလာပါ၊ အချစ်ရွာ စားတော်ဆက်မှာ ထမင်း၊ ဟင်းအပြင် အဖျော်ယမကာနဲ့ ခေါက်ဆွဲကြော်လည်း ရရှိနိုင်ပါတယ်</p>
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-quarter">
+      <img src="chicken01.jpg" alt="Chicken curry" style="width:100%">
+      <h3>ကြက်သားဟင်း</h3>
+      <p>လူမျိုးမရွေး ဘာသာမရွေး လူတိုင်းနီးပါး ကြိုက်နှစ်သက်ကြတဲ့ ဟင်းလျာဖြစ်ပါတယ်။</p>
+    </div>
+    <div class="w3-quarter">
+      <img src="mutton01.jpg" alt="ဆိတ်သားဟင်းလျာ" style="width:100%">
+      <h3>ဆိတ်သားဟင်း</h3>
+      <p>ဆိတ်သားဟင်းကတော့ မြန်မာပြည်မှာ လူကြိုက်များတဲ့ ဟင်းလျာစာရင်းဝင်ပါ<p>
+    </div>
+    <div class="w3-quarter">
+      <img src="beef01.jpg" alt="အမဲသားဟင်းလျာ" style="width:100%">
+      <h3>အမဲသားဟင်း</h3>
+      <p>တခြားနိုင်ငံနဲ့ နိုင်းယှဉ်ရင် မြန်မာပြည်က အမဲသားဟင်းတွေဟာ ပိုမိုပြီးတော့ အသားမာကျစ်ပေမယ့် ချက်တတ်မယ်ဆိုရင်တော့
+      ဟင်းကောင်းတစ်ခွက် ရလာတာပါပဲ</p>
+      <p>ကြိုက်နှစ်သက်ပါရဲ့လား?</p>
+      
+      <p>ဒီမှာ နောက်ထပ်ရနိုင်တဲ့ ဟင်းလျာတွေကို အောက်မှာ ဖော်ပြပေးထားပါတယ်</p>
+    
+    <div style="text-align:center">
+    <h2>ဟင်းလျာအမယ်</h2>
+    <p>ပုံကို လက်ညိုးထိပ်နဲ့ ထိပေးပါ</p>
+    </div>
+    
+    <!-- The four columns -->
+    <div class="row">
+    <div class="column">
+    <img src="pork01.jpg" alt="ဝက်သားဟင်း" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+    <img src="fish01.jpg" alt="ငါးဟင်းလျာ" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+    <img src="Chinese kale01.jpg" alt="ကိုက်လန်ကြော်" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+    <img src="water cress01.jpg" alt="ကန်စွန်းရွက်ကြော်" style="width:100%" onclick="myFunction(this);">
+    </div>
+    </div>
+    
+    <div class="container">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <img id="expandedImg" style="width:100%">
+    <div id="imgtext"></div>
+    </div>
+    
+    <script>
+    function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+    }
+    </script>
+    
+    <p>ထမင်းဟင်းကို ကြိုတင်မှာယူလိုပါက အချစ်ရွာစားတော်ဆက်ရဲ့ Facebook page messenger ကတဆင့် မှာယူနိုင်ပါတယ်
+    
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>စားတော်ကဲ ကျနော်အကြောင်း</h3><br>
+    <img src="mypic02.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+    <div class="w3-padding-32">
+      <h4><b>ကျနော်က Bun Gon ပါ</b></h4>
+      <h6><i>အရသာရှိတဲ့ စားသောက်ဖွယ်ရာတွေ စီမံချက်ပြုတ်ရတာကို နှစ်သက်ပါတယ်</i></h6>
+      <p>ကျနော်ဟာဆိုရင် ထူးကဲတဲ့ ချက်ပြုတ်နည်းနိဿရည်းတွေကို ပုံမှန်လုပ်ကိုင်စားသောက်တတ်သူပါ။ ဟင်းချက်နည်းစာအုပ်တွေကို ဖတ်သလို 
+      လိုင်းပေါ်မှာ တင်ပေးတတ်တဲ့ ဟင်းချက်နည်းမျိုးစုံတွေ၊ ဟင်းချက်ပြိုင်ပွဲတွေကို မလွှတ်တမ်းကြည့်ပြီး 
+      လိုက်လုပ်ကြည့်ရတာဟာလည်း ကျနော်ရဲ့အနားယူ အပန်းဖြေနည်းတစ်ခုပါပဲ။ အဲဒီလိုချက်ပြုတ်ထားတဲ့ စားချင့်စဖွယ် ဟင်းလျာတွေကို သင်တို့တတွေကို စားဖူးစေချင်လှပါတယ်။ 
+      </div>
+  <hr>
+  
+  
+<!-- End page content -->
+</div>
+
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+
+
+<div class="footer-content-right">
+  <a href="https://www.facebook.com/bun.gon.9843"><img src="facebook-icon.png" class="icon-style" alt="Github icon"></a>
+  <a href="#"><img src="Google-logo.png" class="icon-style" alt="Twitter icon"></a>
+  <a href="#"><img src="twitter-logo.png" class="icon-style" alt="Emailicon"></a>
+</div>
+
+<div class="copyright">
+&copy; 2022 ARCKRER. All rights reserved.
+</div>
+</p>
+</body>
+</html>
