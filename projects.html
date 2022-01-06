@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<title>Sample projects</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+
+
+.previous {
+background-color: #4CAF50;
+color: black;
+}
+</style>
+
+<body oncontextmenu="return false">
+  
+  <script type="text/javascript">
+  function mousehandler(e) {
+  var myevent = (isNS) ? e : event;
+  var eventbutton = (isNS) ? myevent.which : myevent.button;
+  if ((eventbutton == 2) || (eventbutton == 3)) return false;
+  }
+  document.oncontextmenu = mischandler;
+  document.onmousedown = mousehandler;
+  document.onmouseup = mousehandler;
+  function disableCtrlKeyCombination(e) {
+  var forbiddenKeys = new Array("a", "s", "c", "x","u");
+  var key;
+  var isCtrl;
+  if (window.event) {
+  key = window.event.keyCode;
+  //IE
+  if (window.event.ctrlKey)
+  isCtrl = true;
+  else
+  isCtrl = false;
+  }
+  else {
+  key = e.which;
+  //firefox
+  if (e.ctrlKey)
+  isCtrl = true;
+  else
+  isCtrl = false;
+  }
+  if (isCtrl) {
+  for (i = 0; i < forbiddenKeys.length; i++) {
+  //case-insensitive comparation
+  if (forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase()) {
+  return false;
+  }
+  }
+  }
+  return true;
+  }
+  </script>
+  
+  <script>
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function MyFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+  var dropdowns = document.getElementsByClassName("dropdown-content");
+  var i;
+  for (i = 0; i < dropdowns.length; i++) {
+  var openDropdown = dropdowns[i];
+  if (openDropdown.classList.contains('show')) {
+  openDropdown.classList.remove('show');
+  }
+  }
+  }
+  }
+  </script>
+  
+
+<!-- Sidebar (hidden by default) -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-bar-item w3-button">Close Menu</a>
+  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
+    <div class="w3-right w3-padding-16">sample projects</div>
+    <div class="w3-center w3-padding-16">Some</div>
+  </div>
+</div>
+  
+
+  abc<br>
+  definition<br>
+  ghi<br>
+  <p>
+  
+<li><a href="food00.html"> အချစ်ရွာ စားတော်ဆက်</a></li>
+  
+  
+  </div>
+  
+  <script>
+  // Script to open and close sidebar
+  function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  }
+  
+  function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  }
+  </script>
+  
+  </p>
+  
+  <p>
+  <a href="project.html"
+  class="previous">&laquo;
+  Previous</a>
+  </p>
+  </body>
+  </html>
