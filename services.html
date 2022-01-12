@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    	<title>My Service</title>
+    <meta charset="utf-8">
+
+<!-- Myanmar unicode font -->
+    	<link rel="stylesheet" href='https://mmwebfonts.comquas.com/fonts/?font=myanmar3' />
+
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <style> -->
+	<style type="text/css">
+  .unicode{
+    font-family:Myanmar3,Yunghkio,'Masterpiece Uni Sans';
+  }
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 5;
+  padding: 5;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+nav{
+  display: flex;
+  height: 60px;
+  width: 100%;
+  background: #1b3b1b; /*#4CAF50; */
+  align-items: center;
+  justify-content: space-between;
+  padding: 5 50px 5 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 10 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a.hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 20px 0 40px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  
+  nav ul{
+    position:fixed;
+    top: 80px;
+    left: -100%;
+    background: #1b3b1b; /*#111;*/
+    height: 100vh;
+    width: 70%;
+    text-align: left;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a.hover{
+    background: none;
+    color: cyan;
+  }
+}
+. service{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+.service div{
+  font-size: 15px;
+  font-weight: 150;
+}
+
+.about {
+background-color: #4CAF50;
+color: black;
+}
+
+
+
+/*Words animation*/
+.ml3 {
+  font-weight: 400;
+  font-size: 1em;
+}
+</style>
+</head>
+
+  <body oncontextmenu="return false">
+  
+  <script type="text/javascript">
+  function mousehandler(e) {
+  var myevent = (isNS) ? e : event;
+  var eventbutton = (isNS) ? myevent.which : myevent.button;
+  if ((eventbutton == 2) || (eventbutton == 3)) return false;
+  }
+  document.oncontextmenu = mischandler;
+  document.onmousedown = mousehandler;
+  document.onmouseup = mousehandler;
+  function disableCtrlKeyCombination(e) {
+  var forbiddenKeys = new Array("a", "s", "c", "x","u");
+  var key;
+  var isCtrl;
+  if (window.event) {
+  key = window.event.keyCode;
+  //IE
+  if (window.event.ctrlKey)
+  isCtrl = true;
+  else
+  isCtrl = false;
+  }
+  else {
+  key = e.which;
+  //firefox
+  if (e.ctrlKey)
+  isCtrl = true;
+  else
+  isCtrl = false;
+  }
+  if (isCtrl) {
+  for (i = 0; i < forbiddenKeys.length; i++) {
+  //case-insensitive comparation
+  if (forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase()) {
+  return false;
+  }
+  }
+  }
+  return true;
+  }
+  </script>
+  
+  <script>
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function MyFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+  var dropdowns = document.getElementsByClassName("dropdown-content");
+  var i;
+  for (i = 0; i < dropdowns.length; i++) {
+  var openDropdown = dropdowns[i];
+  if (openDropdown.classList.contains('show')) {
+  openDropdown.classList.remove('show');
+  }
+  }
+  }
+  }
+  </script>
+  
+    <nav>
+      <div class="logo">
+🌷မင်္ဂလာပါ🌷</div>
+
+<input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+<li><a href="index.html">Home</a></li>
+<li><a class="active" href="services.html">Services</a></li>
+<!--
+<li><a href="reportedspeech.html" class="usp">USP</a></li>-->
+<li><a href="projects.html" >Sample projects</a></li>
+<li><a href="aboutme.html">About me</a></li> 
+</ul>
+</nav>
+
+	<p class="unicode">
+  <!-- Slide Show -->
+  <section>
+  <img class="mySlides" src="mainpic01.jpg"
+  style="width:100%">
+  <img class="mySlides" src="mainpic02.jpg"
+  style="width:100%">
+  <img class="mySlides" src="mainpic03.jpg"
+  style="width:100%">
+  </section>
+  
+  <script>
+  // Automatic Slideshow - change image every 3 seconds
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+  x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 5000);
+  }
+  </script>
+  
+  </p>
+  
+  <p class="unicode">ခေတ်စနစ်နဲ့အညီ မိမိတို့လုပ်ငန်းနာမည်ကို ကိုယ်ပိုင်ဒိုမိန်းနဲ့ ဝက်ဘ်ဆိုက်ပြုလုပ်ထားလိုသူများအတွက် ကျနော်မှ ရေးသားဖန်တီးပေးပါတယ်။ ဝက်ဘ်ဆိုက်လုပ်ပြီး Facebook account, Facebook page 
+  တွေ၊ Twitter, Instagram, Telegram တွေနဲ့ မိမိဝက်ဘ်ဆိုက်ကို ချိတ်ဆက်ထားပြီး လုပ်ငန်းအကြောင်း ဖော်ပြထားတာက ကောင်းမွန်တဲ့ လုပ်ဆောင်ချက်ပါ။
+<img src ="latex.png" height="340" width="345"
+  alt ="logo">
+</p>
+<p>
+<h1 class="ml3">Website တစ်ခုလုပ်ထားပြီး မိမိလုပ်ငန်း အချက်အလက်တွေကို တင်ထားပေးမယ်ဆိုရင် မိမိဖောက်သည်အတွက် အချိန်ကုန်လူပန်း သက်သာစေမှာပါ။</h1>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+<script type="text/javascript">
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml3');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml3 .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 1000,
+    delay: (el, i) => 150 * (i+1)
+  }).add({
+    targets: '.ml3',
+    opacity: 0,
+    duration: 500,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+</p>
+<p>
+  ဝန်ဆောင်မှုအနေနဲ့ မြန်မာဘာသာ၊ အင်္ဂလိပ်ဘာသာနဲ့ ဝက်ဘ်ဆိုက်မှာ တင်လိုတာတွေကို ရေးပေးပါတယ်။
+  WordPress မှာသုံးတဲ့ <a href=latex.html"> LaTex </a> နဲ့လည်း သင်္ချာဆိုင်ရာကိန်းဂဏန်းများ ရေးပေးပါတယ်။
+  Front end ဝက်ဆိုက်အမျိုးအစားကို လက်ခံဖန်တီးပေးပါတယ်။ 
+</p>
+
+
+<p>
+ကျနော်ကို ဆက်သွယ်လိုပါက အောက်ဖော်ပြပါ လိပ်စာတစ်ခုခုကနေ ဆက်သွယ်နိုင်ပါတယ်။
+<br>
+<h3><span>Contact me</span></h3>
+<a href="https://www.facebook.com/bun.gon.9843"><b>Facebook messenger တွင် ဆက်သွယ်ရန်</b></a><br>
+
+<!--<a href="arcksoot@yahoo.com"><b><span>email ဖြင့်ဆက်သွယ်ရန် </b></a> -->
+ </p>
+
+</body>
+</html>
