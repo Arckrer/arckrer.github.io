@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1">
+
+
+<head>
+<title>English poems</title>
+
+
+<style>
+
+/*menu bar */
+ .dropbtn {
+   background-color: silver;/*#3498DB;*/
+   color: white;
+   padding: 15px;
+   font-size: 18px;
+   border: none;
+   cursor: pointer;
+ }
+
+ .dropbtn:hover, .dropbtn:focus {
+   background-color: gray;/*#2980B9;*/
+ }
+
+ .dropdown {
+   position: relative;
+   display: inline-block;
+ }
+
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: silver;/*#f1f1f1;*/
+   min-width: 300px;
+   overflow: auto;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+ }
+
+ .dropdown-content a {
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+ }
+
+ .dropdown a:hover {background-color: #ddd;}
+
+ .show {display: block;}
+
+/* ------------------------------------------
+  DEMO STYLES
+--------------------------------------------- */
+
+body {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #37302a;/* body စာလုံးအရောင်*/
+  background: #fff;
+  font: Myanmar3,Yunghkio,'Masterpiece Uni Sans';/* normal 100%/1.4 sans-serif;*/
+}
+
+section {
+  border-bottom: 1px solid #999;
+  text-align: center;
+  padding: 5px 0 0;
+  height: 900px; /*စာရွက် တိုရှည် ချိန်ရန်*/
+  width: 100%;
+}
+
+h1 {
+  margin-bottom: .5em;
+}
+
+p {
+  width: 95%;
+  margin: 0 auto;
+}
+
+
+ 
+ /*ကူးယူထား*/
+ header {
+ background: #c0c0c0;/*#d3d3d3;/*#DCDCDC;/*#382969;/*#212121;/*#1b1b1b;/*#f4421a;/*navigation bar color*/
+ position: relative;
+ z-index: 3;
+ width: 100%; /*navigation bar အရှည်*/
+ left: 0;
+ top: 0;
+ }
+ 
+ .logo {
+ -webkit-tap-highlight-color: rgba(0,1,2,0);
+ text-decoration: none;
+ font-weight: bold;
+ line-height: 55px; 
+ padding: 0 20px;
+ font-size: 26px;
+ border: none;
+ color: green;/*#fff;*/
+ float: right;
+ }
+ 
+
+
+</style>
+</head>
+
+<body oncontextmenu="return false">
+
+  <script type="text/javascript">
+    function mousehandler(e) {
+        var myevent = (isNS) ? e : event;
+        var eventbutton = (isNS) ? myevent.which : myevent.button;
+        if ((eventbutton == 2) || (eventbutton == 3)) return false;
+    }
+    document.oncontextmenu = mischandler;
+    document.onmousedown = mousehandler;
+    document.onmouseup = mousehandler;
+    function disableCtrlKeyCombination(e) {
+        var forbiddenKeys = new Array("a", "s", "c", "x","u");
+        var key;
+        var isCtrl;
+        if (window.event) {
+            key = window.event.keyCode;
+            //IE
+            if (window.event.ctrlKey)
+                isCtrl = true;
+            else
+                isCtrl = false;
+        }
+        else {
+            key = e.which;
+            //firefox
+            if (e.ctrlKey)
+                isCtrl = true;
+                else
+                              isCtrl = false;
+                      }
+                      if (isCtrl) {
+                          for (i = 0; i < forbiddenKeys.length; i++) {
+                              //case-insensitive comparation
+                              if (forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase()) {
+                                  return false;
+                              }
+                          }
+                      }
+                      return true;
+                  }
+              </script>
+
+  <p>
+  <header>
+    <div class="dropdown">
+    <div class="icon nav-icon-5">
+    <span></span>
+    <span></span>
+    <span></span>
+    </div>
+      <button onclick="MyFunction()" class="dropbtn">☰</button>
+       <a href="#home" class="logo" data-scroll>🖋️📝️Arckrer📐✒️</a>
+      <div id="myDropdown" class="dropdown-content">
+       <!-- <a href="projects.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="aboutme.html">About me</a>
+        --></div>
+    </div>
+</header>
+
+    <script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function MyFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+   <br>
+    
+    <section id="home"
+    <h3>တက္ကသိုလ်ဝင်တန်း အင်္ဂလိပ်ကဗျာ</h3>
+    <h2>POEM</h2>
+    <p>
+    BRIDGES<br>
+    🌉🌉🌉🌉🌉🌉🌉<br><br>
+    
+    I like a bridge -- <br>
+    Any kind of bridge at all.<br><br>
+    
+    A great steel bridge<br>
+    With towers stiff and tall;<br><br>
+    
+    An old covered bridge<br>
+    That spans a waterfall;<br><br>
+    
+    A hewn-stone bridge<br>
+    With its rugged floor and wall;<br><br>
+    
+    A railroad bridge,<br>
+    Where freight trains slowly crawl;<br><br>
+    
+    A wooden bridge,<br>
+    A cement bridge,<br>
+    Whether big or small;<br><br>
+    
+    Yes, I like a bridge ---<br>
+    Just any kind of bridge at all.<br><br>
+    
+    [James S. Tippetts]<br><br>
+    
+    <img src ="bridge.jpg" height="200" width="345"
+    alt ="bridges">
+    </p>
+    </section>
+    
+    <section id="about">
+    <p>
+    <h1>THE ARROW AND THE SONG</h1>
+    🏹🏹🏹🏹🏹🏹🏹🏹🎵🎵🎵🎶🎶🎶🎼🎼🎼 <br><br>
+    I shot an arrow into the air---<br>
+    It fell to earth, I knew not where;<br>
+    For so swiftly it flew, the sight<br>
+    Could not follow it in its flight.<br><br>
+    
+    I breathed a song into the air,<br>
+    It fell to earth, I knew not where:<br>
+    For who has sight so keen and strong,<br>
+    That it could follow the flight of song?<br><br>
+    
+    Long long afterwards, in an oak<br>
+    I found the arrow still unbroke;<br>
+    And the song, from beginning to end,<br>
+    I found again in the heart of a friend.<br><br>
+    
+    [Henry Wadsworth Longfellow]
+    <br><br>
+    <br><br>
+    
+    <h1> THE HEART OF THE TREE</h1>
+    🌳🌳🌳🌴🌴🌴🌲🌲🌲<br><br>
+    What does he plant who plants a tree?<br>
+    He plants the friend of sun and sky;<br>
+    He plants the flag of breezes free;<br>
+    The shaft of beauty, towering high;<br>
+    He plants a home to heaven a-night.<br><br>
+    
+    For song and mother-croon of bird <br>
+    In hushed and happy twilight heard —<br>
+    The 'treble of heaven's harmony —<br>
+    These things he plants who plants a tree. <br>
+    <br>
+    
+    (H.C.Bunner)
+    </p>
+    </section>
+    
+    <section id="projects">
+    <h1> THE QUIET LIFE</h1>
+    <p>
+    Happy the man, whose wish and care<br>
+    A few paternal acres bound,<br>
+    Content to breathe his native air<br>
+    In his own ground.<br><br>
+    
+    Whose herds with milk, whose fields with bread,<br>
+    Whose flocks supply him with attire;<br>
+    Whose trees in summer yield him shade,<br>
+    In winter, fire.<br><br>
+    
+    Blest, who can unconcern'dly find <br>
+    Hours, days and years, slide soft away<br>
+    In health of body, peace of mind,<br>
+    Quiet by day.<br><br>
+    
+    Sound sleep by night, study and ease<br>
+    Together mix'd; sweet recreation,<br>
+    And innocence, which most does please<br>
+    With meditation.<br><br>
+    
+    Thus let me live, unseen, unknown;<br>
+    Thus unlamented let me die;<br>
+    Steal from the world, and not a stone<br>
+    Tell where I lie.<br><br>
+    
+    (A. pope)
+    </p>
+    </section>
+    
+    <section id="blog">
+    <h1>LEISURE</h1>
+    <p>
+    What is this life if, full of care,-<br>
+    We have no time to stand and stare?<br>
+    No time to stand beneath the boughs<br>
+    And stare as long as sheeps or cows:<br><br>
+    
+    No time to see, when woods we pass,<br>
+    Where squirrels hide their nuts in grass:<br>
+    No time to see, in broad daylight,<br>
+    Streams full of stars, like skies at night:<br><br>
+    
+    No time to turn at Beauty's glance,<br>
+    And watch her feet, how they can dance:<br>
+    No time to wait till her mouth can<br>
+    Enrich that smile her eyes began?<br>
+    A poor life this if, full of care,<br>
+    We have no time to stand and stare.<br><br>
+    (William Henry Davies)<br><br>
+    
+    
+    <h1>CLOUD ZOO</h1>
+    I though I saw a cloud whale<br>
+    Sail through a sea of blue;<br>
+    It changed into an elephant<br>
+    Of most unusual hue,<br>
+    And even as I marvelled,<br>
+    It split itself in two.<br><br>
+    
+    I watched a long white serpent<br>
+    Winding it's cloudy way,<br>
+    To pounce upon a cloud frog<br>
+    That unsuspecting lay.<br>
+    The little frog became a bird<br>
+    And slowly flew away.<br><br>
+    
+    All afternoon I watched them,---<br>
+    Such Magic as they knew!<br>
+    I saw a white rhinoceros,<br>
+    And white flamingos, too,<br>
+    Till evening shut her deep blue tent<br>
+    Over my private zoo.<br><br>
+    
+    [Norma. Gillette]
+    </p>
+    </section>
+    
+    <section id="months">
+    <h1>THE MONTHS</h1>
+    <p>
+    January cold desolate;<br>
+    February dripping wet;<br><br>
+    March wind ranges;<br>
+    April changes;<br><br>
+    
+    Birds sing in tune<br>
+    To flower of May,<br><br>
+    
+    And sunny June<br>
+    Brings longest day;<br><br>
+    
+    In scorched July<br>
+    The storm-clouds fly,<br><br>
+    
+    Lightning -torn;<br>
+    August bears corn,<br>
+    <br>
+    September fruit;<br>
+    In rough October<br>
+    Earth must disrobe her,<br><br>
+    
+    Stars fall and shoot<br>
+    In keen November;<br><br>
+    
+    And night is long<br>
+    And cold is strong<br>
+    In bleak December.<br><br>
+    
+    [Christina Rossetti]<br><br>
+    
+    
+    
+    </p>
+    </section>
+    <b><div class="copyright">
+    &copy; 2022 ARCKRER. All rights reserved.
+    </div></b>
+
+</p>
+</body>
+</html>
