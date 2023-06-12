@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    	<title>About me</title>
+    <meta charset="utf-8">
+
+<!-- Myanmar unicode font -->
+    	<link rel="stylesheet" href='https://mmwebfonts.comquas.com/fonts/?font=myanmar3' />
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <style> -->
+	<style type="text/css">
+  .unicode{
+    font-family:Myanmar3,Yunghkio,'Masterpiece Uni Sans';
+  }
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 5;
+  padding: 5;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+img {
+max-width:100%;
+height: auto;
+}
+
+.previous {
+background-color: #4CAF50;
+color: black;
+}
+
+</style>
+</head>
+
+  <body oncontextmenu="return false">
+  
+  <script type="text/javascript">
+  function mousehandler(e) {
+  var myevent = (isNS) ? e : event;
+  var eventbutton = (isNS) ? myevent.which : myevent.button;
+  if ((eventbutton == 2) || (eventbutton == 3)) return false;
+  }
+  document.oncontextmenu = mischandler;
+  document.onmousedown = mousehandler;
+  document.onmouseup = mousehandler;
+  function disableCtrlKeyCombination(e) {
+  var forbiddenKeys = new Array("a", "s", "c", "x","u");
+  var key;
+  var isCtrl;
+  if (window.event) {
+  key = window.event.keyCode;
+  //IE
+  if (window.event.ctrlKey)
+  isCtrl = true;
+  else
+  isCtrl = false;
+  }
+  else {
+  key = e.which;
+  //firefox
+  if (e.ctrlKey)
+  isCtrl = true;
+  else
+  isCtrl = false;
+  }
+  if (isCtrl) {
+  for (i = 0; i < forbiddenKeys.length; i++) {
+  //case-insensitive comparation
+  if (forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase()) {
+  return false;
+  }
+  }
+  }
+  return true;
+  }
+  </script>
+  
+  <script>
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function MyFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+  var dropdowns = document.getElementsByClassName("dropdown-content");
+  var i;
+  for (i = 0; i < dropdowns.length; i++) {
+  var openDropdown = dropdowns[i];
+  if (openDropdown.classList.contains('show')) {
+  openDropdown.classList.remove('show');
+  }
+  }
+  }
+  }
+  </script>
+  
+ <p>
+ <b>	စာနယ်ဇင်းအချို့တွင် ပါဝင်ဖူးသော လိုင်လားခန်း၏ သတင်းပုံရိပ်အချို့
+ </b><br>
+  <img src ="Laila-Khan00.jpg" alt ="Laila Khan 1">
+  
+  <img src ="Laila-Khan01.jpg" alt ="Laila Khan 2">
+  
+  <img src ="Laila-Khan02.jpg" alt ="Laila Khan 3">
+  
+  <img src ="Laila-Khan03.jpg" alt ="Laila Khan 4">
+  
+  <img src ="Laila-Khan04.jpg" alt ="Laila Khan 5">
+  
+  <img src ="Laila-Khan05.jpg" alt ="Laila Khan 6">
+  
+  <img src ="Laila-Khan06.jpg" alt ="Laila Khan 7">
+  
+  <img src ="Laila-Khan07.jpg" alt ="Laila Khan 8">
+  
+  <img src ="Laila-Khan08.jpg" alt ="Laila Khan 9">
+  
+  <img src ="Laila-Khan09.jpg" alt ="Laila Khan 10">
+  
+  <img src ="Laila-Khan10.jpg" alt ="Laila Khan 11">
+  images collected by Tay Za Thein Htun
+</p>
+   </body>
+  </html>
